@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+            <div class="mybox">
+                <form action="">
+                    <div class="box">
+                        <label for="fname">Name</label><br>
+                        <input type="text" id="fname" name="fname" class="bt-1" placeholder="Enter Name"><br>
+                        <span class="span-1" id="spanError">Please enter your Name</span>
+                    </div>
+                    <div class="box">
+                        <label for="feamil">Email</label><br>
+                        <input type="email" id="femail" name="femail" class="bt-1" placeholder="Enter Email"><br>
+                        <span class="span-1" id="SpanPlease">Please enter your email</span>
+                    </div>
+                    <div class="box">
+                        <label for="fpassword">password</label><br>
+                        <input type="password" id="fpassword" name="fpassword" class="bt-1"
+                            placeholder="Enter password"><br>
+                        <span class="span-1" id="SpanPassword"></span>
+                    </div>
+                    <div class="box">
+                        <label for="faddress">Address</label><br>
+                        <input type="url" id="faddress" name="faddress" class="bt-2"
+                            placeholder="Enter your address"><br>
+                        <span class="span-1" id="spanAddress">Please enter you Address</span>
+                    </div>
+                    <div class="box">
+
+                        <label for="vehicle0">Select a Sport</label><br>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Cricket" class="bt-3">
+                        <label for="vehicle1">Cricket</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle1" value="football" class="bt-3">
+                        <label for="vehicle2">Football</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle1" value="baseball" class="bt-3">
+                        <label for="vehicle3">Baseball</label><br>
+                        <span class="span-1" id="spanSport">Please enter your sports</span>
+
+                    </div>
+                    <div class="box">
+                        <label for="vehicle0">Choose your gender</label><br>
+                        <input type="radio" id="male1" name="select1" value="" class="bt-3">
+                        <label for="vehicle1">Male</label><br>
+                        <input type="radio" id="female1" name="select1" value="" class="bt-3">
+                        <label for="vehicle2">Female</label><br>
+                        <input type="radio" id="Prefer1" name="select1" value="bt-3" class="bt-3">
+                        <label for="vehicle3">Prefer not to say</label><br>
+                        <span class="span-1" id="spanchoose">Please enter your Choose</span>
+                    </div>
+
+                    <div class="box">
+                        <label for="">Select your country</label><br>
+                        <select name="sports" class="bt-1" id="optionFont" required>
+                            <option value="India">India</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="UAE">Uae</option>
+                            
+                        </select><br>
+                        <span class="span-1" id="spancountry">Please enter your country</span>
+                    </div>
+                    <div class="box1">
+                        <button type="reset" class="interdetalis">Rest</button>
+                        <button type="button" class="interbutton" onclick="mybutton()">Save</button>
+                    </div>
+                </form>
+
+
+            </div>
+
+        <div class="mybox-1 p-3 my-5" >
+            <h1 class="bt_inter p-5" id="noUser">No user added</h1>
+
+            <table id="valuetable">
+                <thead class="justify-content-between">
+                    <th class="mydetalis">Name</th>
+                    <th class="mydetalis">Email</th>
+                    <th class="mydetalis">Password</th>
+                    <th class="mydetalis">Address</th>
+                    <th class="mydetalis">Sport</th>
+                    <th class="mydetalis">Gender</th>
+                    <th class="mydetalis">country</th>
+                    <!-- <th class="mydetalis">Edit</th>
+                    <th class="mydetalis">Delete</th> -->
+                </thead>
+
+                <tbody id="tBody">
+                    <tr>
+                        <td>
+                            <span class="mybt" id="namevalue"></span>
+                        </td>
+                        <td>
+                            <span class="mybt" id="emailvalue"></span>
+                        </td>
+                        <td>
+                            <span class="mybt" id="passwordvalue"></span>
+                        </td>
+                        <td>
+                            <span class="mybt" id="addressvalue"></span>
+                        </td>
+                        <td>
+                            <span class="mybt" id="sportvalue"></span>
+                        </td>
+                        <td>
+                            <span class="mybt" id="gendervalue"></span>
+                        </td>
+                        <td>
+                            <span class="mybt" id="countryvalue"></span>
+                        </td>
+                        <td>
+                            <span class="mybt" id="edityvalue"></span>
+                        </td>
+                        <td>
+                            <span class="mybt" id="deletevalue"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="Assets/javascript/marudetalis.js"></script>
+    <script src="Assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="Assets/bootstrap/js/main.js"></script> -->
+</body>
+
+</html>
