@@ -217,11 +217,58 @@ function resetForm() {
 
 }
 
-function editData(){
-    console.log("Edit function Called");
+function editData(value){
+    console.log("Edit function Called", value);
+
+    const sportElement = document.getElementById(value);
+
+    console.log(sportElement.children[0].innerHTML);
+    console.log(sportElement.children[1].innerHTML);
+    console.log(sportElement.children[2].innerHTML);
+    console.log(sportElement.children[3].innerHTML);
+    console.log(sportElement.children[4].innerHTML);
+    console.log(sportElement.children[5].innerHTML);
+    console.log(sportElement.children[6].innerHTML);
+
+    namedetalis.value = sportElement.children[0].innerHTML;
+    email.value = sportElement.children[1].innerHTML;
+    fpassword.value = sportElement.children[2].innerHTML;
+    faddress.value = sportElement.children[3].innerHTML;
+    optionFont.value = sportElement.children[6].innerHTML;
+
+    if(vehicle1.length > 0){
+        for (let i = 0; i < vehicle1.length; i++) {
+            const element = vehicle1[i];
+
+            const allVall = sportElement.children[4].innerHTML.split(",");
+            if (allVall.includes(element.value)) {
+                element.checked = true;
+            }
+            
+        }
+    }
+
+    if (select1.length > 0) {
+        for (let i = 0; i < select1.length; i++) {
+            const myDetalis = select1[i];
+
+            const myMain  = sportElement.children[5].innerHTML;
+
+            if (myMain.includes(myDetalis.value)) {
+                
+            
+            myDetalis.checked = true;
+            
+        }
+    }
+}
+    
+    
     
 }
 function deleteData(){
     console.log("Delete Function Called");
     
 }
+
+
