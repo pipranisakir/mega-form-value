@@ -38,6 +38,8 @@ const DeleteIcon = `<svg width="11" height="13" viewBox="0 0 11 13" fill="none" 
 
 var count = 0;
 
+var isEdit = ""; 
+
 function mybutton() {
     if (!namedetalis.value) {
         spanError.style.display = 'block';
@@ -151,8 +153,19 @@ function mybutton() {
 }
 
 function mybox(formData) {
-    const tr = document.createElement("tr");
-    let id = "list_" + count; 
+    var tr;
+    let id;
+
+    if (isEdit) {
+        tr = document.getElementById(isEdit);
+        tr.innerHTML ="",
+        id = isEdit;
+
+    } else {
+        tr = document.createElement("tr");
+        id = "list_" + count;
+    }
+ 
     tr.id = id;
     console.log(tr);
 
@@ -169,10 +182,12 @@ function mybox(formData) {
 
     editTd.addEventListener("click", () =>{
         editData(id)
+
+        
     });
 
     DeleteTd.addEventListener("click",() =>{
-        deleteData()
+        deleteData(id);
     });
 
 
@@ -214,12 +229,13 @@ function resetForm() {
     faddress.value = "";
     optionFont.value = "";
     fpassword.value = "";
+    isEdit = "";
 
 }
 
 function editData(value){
     console.log("Edit function Called", value);
-
+        isEdit = value;
     const sportElement = document.getElementById(value);
 
     console.log(sportElement.children[0].innerHTML);
@@ -252,9 +268,8 @@ function editData(value){
         for (let i = 0; i < select1.length; i++) {
             const myDetalis = select1[i];
 
-            const myMain  = sportElement.children[5].innerHTML;
 
-            if (myMain.includes(myDetalis.value)) {
+            if (myDetalis.value == sportElement.children[5].innerHTML) {
                 
             
             myDetalis.checked = true;
@@ -266,8 +281,12 @@ function editData(value){
     
     
 }
-function deleteData(){
-    console.log("Delete Function Called");
+function deleteData(id){
+    console.log("Delete Function Called", id);
+
+    const element = document.getElementById(id);
+    element.remove();
+    resetForm();
     
 }
 
