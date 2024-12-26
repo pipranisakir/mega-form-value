@@ -43,8 +43,12 @@ var isEdit = "";
 function mybutton() {
     if (!namedetalis.value) {
         spanError.style.display = 'block';
+        
+        
     } else {
         spanError.style.display = 'none';
+        
+        
     }
 
 

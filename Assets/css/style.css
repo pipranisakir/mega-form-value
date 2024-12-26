@@ -9,7 +9,7 @@ body{
 .mybox{
     background-color: white;
     width: 1200px;
-    height: 1240px;
+    height: 100%;
     border-radius: 42px;
     margin-top: 80px;
     margin-left: 80px;
@@ -93,5 +93,10 @@ body{
     font-size: 13px;
 }
 #noUser{
+    display: none;
+}
+
+
+span{
     display: none;
 }
