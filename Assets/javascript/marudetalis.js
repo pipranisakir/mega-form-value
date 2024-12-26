@@ -144,7 +144,7 @@ function mybutton() {
             Password: fpassword.value,
             country: optionFont.value,
             sport: ischk,
-            gender : AnyChecked
+            gender : AnyChecked,
         };
         count++;
         console.log(count);
@@ -235,7 +235,19 @@ function resetForm() {
     fpassword.value = "";
     isEdit = "";
 
-}
+    if (vehicle1.length > 0) {
+        for (let i = 0; i < vehicle1.length; i++) {
+            vehicle1[i].checked = false;
+        }
+      }
+    
+      if (select1.length > 0) {
+        for (let i = 0; i < select1.length; i++) {
+            select1[i].checked = false;
+        }
+      }
+    }
+
 
 function editData(value){
     console.log("Edit function Called", value);
